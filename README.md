@@ -1,6 +1,3 @@
-Here's an updated `README.md` with instructions that match your provided Makefile:
-
-
 # Go Regex WebAssembly Demo
 
 This project demonstrates how to use Go's regular expression library in JavaScript via WebAssembly (Wasm). It includes a simple HTML interface where users can input a regex pattern and text, with the results displayed dynamically. The project also wraps the WebAssembly functionality in a JSDoc-typed JavaScript library (`regexLib.js`) to provide a clean API.
