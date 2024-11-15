@@ -1,6 +1,6 @@
 {
   "name": "@pintjuk/golang-regex",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A JavaScript library for Golang-based regex matching using WebAssembly.",
   "main": "index.js",
   "files": [
