@@ -1,17 +1,28 @@
 /**
  * A JavaScript library for using Go-based regex matching via WebAssembly.
  */
-class RegexLib {
+class GoRegexWrapper {
     /**
      * Initializes the RegexLib instance, loading the WebAssembly module.
      * @param {string} wasmPath - The path to the compiled WebAssembly file.
      * @returns {Promise<RegexLib>} A promise that resolves to the initialized instance.
      */
     static async initialize(wasmPath) {
+        if (typeof Go === "undefined") {
+            throw new Error("wasm_exec.js must be loaded before using GoRegexWrapper.");
+        }
+
         const go = new Go();
         const wasmModule = await WebAssembly.instantiateStreaming(fetch(wasmPath), go.importObject);
         go.run(wasmModule.instance);
-        return new RegexLib();
+        GoRegexWrapper._instance = new GoRegexWrapper();
+    }
+
+    static getInstance() {
+        if (!GoRegexWrapper._instance) {
+            throw new Error("GoRegexWrapper has not been initialized. Call initialize() first.");
+        }
+        return GoRegexWrapper._instance;
     }
 
     /**
@@ -25,10 +36,12 @@ class RegexLib {
         try {
             return matchRegex(pattern, text);
         } catch (error) {
-            throw new Error("Invalid regex pattern or WebAssembly error: " + error.message);
+            throw new Error(error.message);
         }
     }
 }
 
-export default RegexLib;
+GoRegexWrapper._instance = null;
+
+export default GoRegexWrapper;
 

@@ -1,0 +1,35 @@
+{
+  "name": "@pintjuk/golang-regex",
+  "version": "1.0.1",
+  "description": "A JavaScript library for Golang-based regex matching using WebAssembly.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "goRegexWrapper.js",
+    "wasm_exec.js",
+    "goregex.wasm"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "regex",
+    "golang",
+    "webassembly",
+    "wasm",
+    "library"
+  ],
+  "author": "Daniil Pintjuk",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pintjuk/go-regex-wasm"
+  },
+  "bugs": {
+    "url": "https://github.com/pintjuk/go-regex-wasm/issues"
+  },
+  "homepage": "https://github.com/pintjuk/go-regex-wasm"
+}
