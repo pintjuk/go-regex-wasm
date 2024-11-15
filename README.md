@@ -15,8 +15,9 @@
 
 For a complete demonstration of how to use this package, check out the live demo repository:
 
-👉 **[Golang Regex Demo](https://github.com/pintjuk/golang-regex-demo)**
-
+👉 **[Demo Repo](https://github.com/pintjuk/golang-regex-demo)**
+👉 **[Demo Site](https://pintjuk.github.io/golang-regex-demo)**
+** https://github.com/pintjuk/golang-regex-demo
 This demo includes a simple form interface and usage examples.
 
 ---
