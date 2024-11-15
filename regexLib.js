@@ -41,7 +41,6 @@ class GoRegexWrapper {
     }
 }
 
-GoRegexWrapper._instance = null;
 
 export default GoRegexWrapper;
 
